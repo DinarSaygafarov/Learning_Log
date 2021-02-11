@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'learning_logs/base.html' %}
+{% block content %}
+<p>Topics</p>
+<ul>
+    {% for topic in topics %}
+    <li>{{topic}}</li>
+    {% empty %}
+    <li>No topic shave been added yet</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
+</body>
+</html>
