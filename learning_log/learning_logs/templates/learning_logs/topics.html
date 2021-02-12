@@ -7,12 +7,12 @@
 <body>
 {% extends 'learning_logs/base.html' %}
 {% block content %}
-<p>Topics</p>
+<p>Topic</p>
 <ul>
     {% for topic in topics %}
-    <li>{{topic}}</li>
-    {% empty %}
-    <li>No topic shave been added yet</li>
+    <li>
+        <a href="{% url 'learning_logs:topic' topic.id %}">{{topic}}</a>
+    </li>
     {% endfor %}
 </ul>
 
